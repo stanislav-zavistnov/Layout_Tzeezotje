@@ -1,0 +1,22 @@
+.footer {
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social__link {
+  color: var(--black);
+  border-color: var(--black);
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}

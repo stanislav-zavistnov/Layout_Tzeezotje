@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tzeezotje</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ВАШ_API_КЛЮЧ" type="text/javascript"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/gallery.js"></script>
+
+</head>
+
+<body class="body">
+  <h1 class="visually-hidden">
+    Tzeezotje
+  </h1>
+  <div class="loading">
+    <img class="loading-image" src="img/loading.svg" alt="loading picture">
+  </div>
+  <div class="blur-window"></div>
+  <div class="hero-header-wrap">
+    <div class="feedback-form-wrap">
+      <button class="btn-reset close-btn">
+        Close
+      </button>
+      <form class="feedback-form">
+        <p class="form-title">
+          Reserve a table
+        </p>
+        <input class="feedback-form__input input-name" type="text" placeholder="Name">
+        <input class="feedback-form__input input-mail" type="email" placeholder="E-mail">
+        <textarea class="feedback-form__textarea input-comment" name="comment" placeholder="Your question"></textarea>
+        <button class="feedback-form__btn btn-reset" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+    <header class="header container header-container">
+      <a class="header-logo" href="#">
+        <img class="header-logo__img" src="img/logo.svg" alt="logo Tzeezotje">
+      </a>
+      <div class="burger-btn">
+        <span class="burger-line burger-line--top"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line burger-line--bottom"></span>
+      </div>
+      <div class="burger-wrap">
+        <nav class="burger-menu">
+          <button class="burger-close-btn btn-reset">
+            <span class="burger-close-btn__line burger-close-btn__line--first"></span>
+            <span class="burger-close-btn__line burger-close-btn__line--second"></span>
+          </button>
+          <ul class="header-nav-list list-reset header-nav-list--burger">
+            <li class="header-nav-list__item header-nav-list__item--burger gsap-burger">
+              <a class="header-nav-list__item-link" href="#">
+                À la carte
+              </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list__item--burger gsap-burger">
+              <a class="header-nav-list__item-link" href="#">
+                Wijnkaart
+              </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list__item--burger gsap-burger">
+              <a class="header-nav-list__item-link" href="#">
+                Lunchmenu
+              </a>
+            </li>
+            <li class="header-nav-list__item header-nav-list__item--burger gsap-burger">
+              <a class="header-nav-list__item-link" href="#">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <div class="burger-menu-contact gsap-burger">
+            <a class="header-phone header-phone--burger" href="#">
+              +32 9 282 57 25
+            </a>
+          </div>
+        </nav>
+      </div>
+      <nav class="header-nav">
+        <ul class="header-nav-list list-reset">
+          <li class="header-nav-list__item">
+            <a class="header-nav-list__item-link gsap-header" href="#">
+              À la carte
+            </a>
+          </li>
+          <li class="header-nav-list__item">
+            <a class="header-nav-list__item-link gsap-header" href="#">
+              Wijnkaart
+            </a>
+          </li>
+          <li class="header-nav-list__item">
+            <a class="header-nav-list__item-link gsap-header" href="#">
+              Lunchmenu
+            </a>
+          </li>
+          <li class="header-nav-list__item">
+            <a class="header-nav-list__item-link gsap-header" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header-phone not-burger gsap-header" href="#">
+        +32 9 282 57 25
+      </a>
+    </header>
+    <section class="hero container hero-container">
+      <p class="hero-descr gsap-hero">
+        OPEN EVERYDAY 6AM - 9PM
+      </p>
+      <h2 class="hero-title gsap-hero">
+        A bad day with lunch is better than a good day without it.
+      </h2>
+      <div class="hero-contacts">
+        <button class="hero-btn btn-reset gsap-hero">
+          Reserve a table
+        </button>
+        <div class="hero-social-wrap">
+          <a class="hero-social-wrap__link gsap-hero" href="#">
+            Fb
+          </a>
+          <a class="hero-social-wrap__link gsap-hero" href="#">
+            Ig
+          </a>
+          <a class="hero-social-wrap__link gsap-hero" href="#">
+            Tw
+          </a>
+          <a class="hero-social-wrap__link gsap-hero" href="#">
+            Yt
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <main>
+    <section class="special-offer container">
+      <div class="special-offer-text-wrap">
+        <ul class="special-offer-list list-reset">
+          <li class="special-offer-list__item element-animation-right">
+            <h3 class="special-offer-list__item-title">
+              Woensdag 12/01
+            </h3>
+            <div class="special-offer-list__item-descr-wrap">
+              <span class="special-offer-list__item-descr">
+                Salade met Serrano
+              </span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-descr">
+                Steak Tartaar
+              </span>
+            </div>
+          </li>
+          <li class="special-offer-list__item element-animation-left">
+            <h3 class="special-offer-list__item-title">
+              Donderdag 13/01
+            </h3>
+            <div class="special-offer-list__item-descr-wrap">
+              <span class="special-offer-list__item-descr">
+                Toast Roquefort
+              </span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-descr">
+                Penne met Kip en Prei
+              </span>
+            </div>
+          </li>
+          <li class="special-offer-list__item element-animation-right">
+            <h3 class="special-offer-list__item-title">
+              Vrijdag 14/01
+            </h3>
+            <div class="special-offer-list__item-descr-wrap">
+              <span class="special-offer-list__item-descr">
+                Verrassing van de Chef
+              </span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-descr">
+                Penne met Kip en Prei
+              </span>
+            </div>
+          </li>
+          <li class="special-offer-list__item element-animation-left">
+            <h3 class="special-offer-list__item-title">
+              Zaterdag 15/01
+            </h3>
+            <div class="special-offer-list__item-descr-wrap">
+              <span class="special-offer-list__item-descr">
+                Verrassing van de Chef
+              </span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-descr">
+                Penne met Kip en Prei
+              </span>
+            </div>
+          </li>
+          <li class="special-offer-list__item element-animation-right">
+            <h3 class="special-offer-list__item-title">
+              Zondag 16/01
+            </h3>
+            <div class="special-offer-list__item-descr-wrap">
+              <span class="special-offer-list__item-descr">
+                Verrassing van de Chef
+              </span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-dot"></span>
+              <span class="special-offer-list__item-descr">
+                Penne met Kip en Prei
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="special-offer-image-wrap">
+        <div class="special-offer-image special-offer-image--first element-animation-top"></div>
+        <div class="special-offer-image special-offer-image--second element-animation-bottom"></div>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="feedback-container container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img class="slide-content__img element-animation-appearence-only" src="img/feedback.svg" alt="feedback">
+                <h3 class="slide-content__title element-animation-appearence-only">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <p class="slide-content__descr element-animation-appearence-only">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br
+                    class="separator">
+                  invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br
+                    class="separator">
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="slide-content__author element-animation-appearence-only">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img class="slide-content__img element-animation-appearence-only" src="img/feedback.svg" alt="feedback">
+                <h3 class="slide-content__title element-animation-appearence-only">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <p class="slide-content__descr element-animation-appearence-only">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br
+                    class="separator">
+                  invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br
+                    class="separator">
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="slide-content__author element-animation-appearence-only">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img class="slide-content__img element-animation-appearence-only" src="img/feedback.svg" alt="feedback">
+                <h3 class="slide-content__title element-animation-appearence-only">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <p class="slide-content__descr element-animation-appearence-only">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor<br
+                    class="separator">
+                  invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et<br
+                    class="separator">
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                </p>
+                <p class="slide-content__author element-animation-appearence-only">
+                  ALAIN HEYNDRICKX
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <section class="about container">
+      <div class="about-wrap">
+        <div class="about-row">
+          <div class="about-row__text about-row__text--first element-animation-appearence-only">
+            <h3 class="about-row__text-title">
+              LEKKER&nbsp;ETEN
+              <span class="about-row__text-title-line"></span>
+            </h3>
+            <p class="about-row__text-descr">
+              Eten gaat niet over indruk maken op mensen.
+              Het gaat erom dat ze zich op hun gemak voelen. Dat is onze filosofie, goed eten in een goede sfeer.
+            </p>
+          </div>
+          <div class="about-row__image about-row__image--first element-animation-right"></div>
+        </div>
+        <div class="about-row">
+          <div class="about-row__image about-row__image--second element-animation-left"></div>
+          <div class="about-row__text about-row__text--second element-animation-appearence-only">
+            <h3 class="about-row__text-title">
+              TOFFE&nbsp;AMBIANCE
+              <span class="about-row__text-title-line"></span>
+            </h3>
+            <p class="about-row__text-descr">
+              Het creëren van de juiste sfeer is zeer belangrijk voor ons.
+              We nemen onze tijd om te zorgen dat alle elementen bijdragen aan de juiste setting.
+            </p>
+          </div>
+        </div>
+        <div class="about-row">
+          <div class="about-row__text about-row__text--third element-animation-appearence-only">
+            <h3 class="about-row__text-title">
+              LEKKERE&nbsp;COCKTAILS
+              <span class="about-row__text-title-line"></span>
+            </h3>
+            <p class="about-row__text-descr">
+              Ons doel is simpel: een gastvrije plek bieden waar u kunt genieten van een onvergetelijke cocktail,
+              een goed gesprek en lekker eten.
+            </p>
+          </div>
+          <div class="about-row__image about-row__image--third element-animation-right"></div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery container">
+      <div class="gallery-background"></div>
+      <div class="swiper-gallery">
+        <div class="gallery-text-wrap">
+          <h2 class="gallery-title">
+            Sfeerfoto's
+          </h2>
+          <p class="gallery-descr">
+            De beste manier om de sfeer te ervaren is eens langskomen.
+            In tussentijd hebben we hier alvast wat foto’s voor je klaar.
+          </p>
+        </div>
+        <div class="swiper-wrapper swiper-wrapper-gallery">
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--1"></div>
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--2"></div>
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--3"></div>
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--2"></div>
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--1"></div>
+          <div class="swiper-slide swiper-slide-gallery swiper-slide-gallery--3"></div>
+        </div>
+        <div class="swiper-button-prev swiper-button-prev-gallery"></div>
+        <div class="swiper-button-next swiper-button-next-gallery"></div>
+      </div>
+    </section>
+    <section class="contacts container">
+      <div class="contacts-wrap">
+        <div class="contacts-link-wrap">
+          <h2 class="contacts-title element-animation-appearence-only">
+            Contacts
+          </h2>
+          <ul class="contacts-link-list list-reset">
+            <li class="contacts-link-list__item contacts-link-list__item--phone element-animation-appearence-only">
+              <p class="contacts-link-list__item-title">
+                Phone Number
+              </p>
+              <a class="contacts-link-list__item-link" href="#">
+                +32 9 282 57 25
+              </a>
+            </li>
+            <li class="contacts-link-list__item contacts-link-list__item--mail element-animation-appearence-only">
+              <p class="contacts-link-list__item-title">
+                Email
+              </p>
+              <a class="contacts-link-list__item-link" href="#">
+                info@email.com
+              </a>
+            </li>
+            <li class="contacts-link-list__item contacts-link-list__item--hours element-animation-appearence-only">
+              <p class="contacts-link-list__item-title">
+                Opening Hours
+              </p>
+              <a class="contacts-link-list__item-link" href="#">
+                Everyday from 6 AM - 9 PM
+              </a>
+            </li>
+            <li class="contacts-link-list__item contacts-link-list__item--location element-animation-appearence-only">
+              <p class="contacts-link-list__item-title">
+                Map Street
+              </p>
+              <a class="contacts-link-list__item-link" href="#">
+                Jl. Raya Surabaya 2787
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts-form-wrap">
+          <h2 class="contacts-title element-animation-appearence-only">
+            have any questions?
+          </h2>
+          <form class="contacts-form">
+            <div class="input-wrap">
+              <div class="input-name-wrap element-animation-appearence-only">
+                <p class="contacts-input-name">
+                  Name
+                </p>
+                <input class="contacts-input contacts-input--name" type="text" placeholder="Input your name">
+              </div>
+              <div class="input-mail-wrap element-animation-appearence-only">
+                <p class="contacts-input-name">
+                  Email
+                </p>
+                <input class="contacts-input contacts-input--mail" type="email" placeholder="Input your email">
+              </div>
+            </div>
+            <div class="textarea-wrap element-animation-appearence-only">
+              <p class="contacts-input-name">
+                Speciale Request
+              </p>
+              <textarea class="contacts-textarea" placeholder="Input your special request"></textarea>
+            </div>
+            <button class="contacts-btn btn-reset element-animation-appearence-only">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="map" class="contacts-map"></div>
+    </section>
+  </main>
+  <footer class="footer container">
+    <a class="footer-logo element-animation-appearence-only" href="#">
+      <img class="footer-logo__image" src="img/footer-logo.svg" alt="logo">
+    </a>
+    <div class="footer-social element-animation-appearence-only">
+      <div class="hero-social-wrap">
+        <a class="hero-social-wrap__link footer-social__link" href="#">
+          Fb
+        </a>
+        <a class="hero-social-wrap__link footer-social__link" href="#">
+          Ig
+        </a>
+        <a class="hero-social-wrap__link footer-social__link" href="#">
+          Tw
+        </a>
+        <a class="hero-social-wrap__link footer-social__link" href="#">
+          Yt
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
